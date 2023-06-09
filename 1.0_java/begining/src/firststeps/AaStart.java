@@ -1,7 +1,7 @@
 package firststeps;
 
-public class Start {
+public class AaStart {
     public static void main(String[] args) {
-
+        System.out.println("Hello World");
     }
 }
