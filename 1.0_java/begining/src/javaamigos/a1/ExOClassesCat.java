@@ -1,5 +1,7 @@
 package javaamigos.a1;
 
+import java.util.Objects;
+
 public class ExOClassesCat {
     private String name;
     private String color;
@@ -9,9 +11,13 @@ public class ExOClassesCat {
     }
 
     public ExOClassesCat(String name, int age, String color) {
+        this(name,age);
+        this.color = color;
+    }
+
+    public ExOClassesCat(String name, int age) {
         this.name = name;
         this.age = age;
-        this.color = color;
     }
 
     public ExOClassesCat(String name){
@@ -49,5 +55,28 @@ public class ExOClassesCat {
 
     public String toString(){
         return "name: " + name + " Color: " + color + " Age: " + age;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "ExOClassesCat{" +
+//                "name='" + name + '\'' +
+//                ", color='" + color + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ExOClassesCat that = (ExOClassesCat) o;
+        return age == that.age && Objects.equals(name, that.name) && Objects.equals(color, that.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, color, age);
     }
 }

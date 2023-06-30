@@ -6,9 +6,17 @@ public class ExOClasses1 {
         rose.meow();
         System.out.println(rose.getName());
         System.out.println(rose.getAge());
-
-        //
         System.out.println(rose);
+
+        System.out.println();
+
+        ExOClassesCat rose1 = new ExOClassesCat("Rose", 5, "blue");
+        ExOClassesCat rose2 = new ExOClassesCat("Rose", 5, "blue");
+
+        System.out.println(rose1 == rose2);
+        System.out.println(rose1.equals(rose2));
+
+
 
 //        System.out.println();
 //
@@ -23,7 +31,7 @@ public class ExOClasses1 {
 //        System.out.println(jupiter.getName());
 //        System.out.println(jupiter.getAge());
 //
-   }
+    }
 
 
 }
